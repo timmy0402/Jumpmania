@@ -5,8 +5,8 @@
 - Rory Bray
 - Caitlin Tran
 ## Description
-2D platformer with various enemies and obstacles in a fantasy setting where the primary mechanics are running, jumping, and collecting items while moving towards the finish line
-2d combat platformer game where you collect gold from fallen enemies for points and power ups and try to survive as long as possible.
+- 2D platformer with various enemies and obstacles in a fantasy setting where the primary mechanics are running, jumping, and collecting items while moving towards the finish line
+- 2d combat platformer game where you collect gold from fallen enemies for points and power ups and try to survive as long as possible.
 ## Similarities and Differences
 - Cuphead
   - Simularities: Platforming and shooting things
