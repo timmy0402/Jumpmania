@@ -29,7 +29,7 @@ public class EnemyLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("player");
+        player = GameObject.FindWithTag("Player");
         patrolPoint = transform.position;
         curState = State.Patrol;    
     }
