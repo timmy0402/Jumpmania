@@ -1,5 +1,5 @@
 # Jumpmania
-[WEBGL build](https://timmy0402.github.io/Jumpmania/) Temporally a WASD only
+[WEBGL build](https://timmy0402.github.io/Jumpmania/) Prototype 1
 ## CSS 385 Project
 - Tim Huynh
 - Rory Bray
