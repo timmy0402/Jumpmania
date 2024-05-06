@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float jumpForce = 15f;
+    public float jumpForce = 10f;
     public float jumpDelay = 0.25f;
     public float runningJumpForce = 5f;
     public LayerMask groundLayer;
