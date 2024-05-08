@@ -108,6 +108,7 @@ MonoBehaviour:
   calmDist: 20
   patrolDist: 10
   patrolSpeed: 2
+  item: {fileID: 1189133900669027549, guid: 53468e19c56dbfa40896789e1d741fdc, type: 3}
 --- !u!50 &-3751733310226060901
 Rigidbody2D:
   serializedVersion: 4
