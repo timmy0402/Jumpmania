@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
     public int currentHealth;
 
     public HealthBar healthBar;
+    public float iframe = 2f;
+    private float timer;
 
     private void Start()
     {
@@ -24,11 +26,15 @@ public class Player : MonoBehaviour
 
     public void DamagePlayer(int damage)
     {
-        currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
-        if (currentHealth <= 0)
+        if (Time.time > timer)
         {
-            Debug.Log("Game Over!");
+            currentHealth -= damage;
+            healthBar.SetHealth(currentHealth);
+            if (currentHealth <= 0)
+            {
+                Debug.Log("Game Over!");
+            }
+            timer = Time.time + iframe;
         }
     }
 }
