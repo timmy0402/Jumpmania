@@ -6,8 +6,8 @@ TagManager:
   tags:
   - SpawnPoint
   - Enemy
-  - PatrolPoint
   - Coin
+  - Projectile
   layers:
   - Default
   - TransparentFX

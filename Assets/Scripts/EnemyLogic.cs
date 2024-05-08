@@ -11,6 +11,8 @@ public class EnemyLogic : MonoBehaviour
     public float chaseSpeed = 10f;
     public float minDist = 1f;
     public int hp = 4;
+    public int eStrength;
+    //public float knockback;
 
     public float agroDist = 5f;
     public float calmDist = 10f;
@@ -63,8 +65,6 @@ public class EnemyLogic : MonoBehaviour
                 }
                 break;
         }
-
-
     }
 
     private void Chase()
@@ -101,6 +101,19 @@ public class EnemyLogic : MonoBehaviour
         spawnerGlobal = spawner.GetComponent<GlobalSpawner>();
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            //Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
+            //Vector2 knockbackDirection = collision.transform.position - transform.position;
+            //knockbackDirection.y = 0;
+
+            Player playerHealth = collision.gameObject.GetComponent<Player>();
+            playerHealth.DamagePlayer(eStrength);
+            //rb.AddForce(knockbackDirection.normalized * knockback, ForceMode2D.Impulse);
+        }
+    }
     //For calculating varying levels of damage based on player stats
     public void calculateDamage(int dmg)
     {

@@ -8243,11 +8243,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7492966500798506359, guid: 4381683a6bb12054c83a3dfc8e299a1b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.03
+      value: -0.0055805445
       objectReference: {fileID: 0}
     - target: {fileID: 7492966500798506359, guid: 4381683a6bb12054c83a3dfc8e299a1b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.01
+      value: 13.109557
       objectReference: {fileID: 0}
     - target: {fileID: 7492966500798506359, guid: 4381683a6bb12054c83a3dfc8e299a1b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8461,14 +8461,9 @@ GameObject:
   - component: {fileID: 1550383566}
   - component: {fileID: 1550383565}
   - component: {fileID: 1550383564}
-  - component: {fileID: 1550383562}
-
-  - component: {fileID: 1550383570}
-  - component: {fileID: 1550383563}
   - component: {fileID: 1550383568}
-  - component: {fileID: 1550383569}
-=======
-
+  - component: {fileID: 1550383563}
+  - component: {fileID: 1550383562}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -8686,31 +8681,6 @@ MonoBehaviour:
 --- !u!1001 &1665897102
 PrefabInstance:
   m_ObjectHideFlags: 0
-
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1550383561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bab98f81bed04c842931c618ce8160d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  booletPrefab: {fileID: 9050237730369118198, guid: c2986e522d3870f43984cfac2c9c9cbf, type: 3}
---- !u!114 &1550383570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1550383561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0b00148ab53d8c47bbfdccbc9103bfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coinScore: {fileID: 0}
-=======
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
@@ -8993,7 +8963,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53468e19c56dbfa40896789e1d741fdc, type: 3}
-
 --- !u!1 &2048852763
 GameObject:
   m_ObjectHideFlags: 0
