@@ -16,7 +16,6 @@ public class Movement : MonoBehaviour
     private bool onGround;
     private Rigidbody2D rb;
     private float jumpTimer;
-    public GameObject booletPrefab;
 
     public ParticleSystem dust;
     // Start is called before the first frame update

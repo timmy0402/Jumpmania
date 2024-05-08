@@ -8779,10 +8779,10 @@ GameObject:
   - component: {fileID: 1550383566}
   - component: {fileID: 1550383565}
   - component: {fileID: 1550383564}
+  - component: {fileID: 1550383562}
   - component: {fileID: 1550383568}
   - component: {fileID: 1550383563}
   - component: {fileID: 1550383569}
-  - component: {fileID: 1550383562}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -8859,7 +8859,6 @@ MonoBehaviour:
   gravity: 1
   fallMultiplier: 5
   colliderOffset: {x: 0, y: 1, z: 0}
-  booletPrefab: {fileID: 9050237730369118198, guid: c2986e522d3870f43984cfac2c9c9cbf, type: 3}
   dust: {fileID: 947580573}
   speed: 5
 --- !u!50 &1550383564
@@ -8996,6 +8995,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 1107377353}
+  iframe: 2
 --- !u!114 &1550383569
 MonoBehaviour:
   m_ObjectHideFlags: 0
