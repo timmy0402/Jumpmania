@@ -2685,7 +2685,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1550383567}
-  healthBar: {fileID: 1107377351}
   smoothSpeed: 0.125
   offset: {x: 0, y: 0, z: -10}
 --- !u!1001 &724135730
@@ -2837,7 +2836,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -162, y: 28}
+  m_AnchoredPosition: {x: -162, y: 165}
   m_SizeDelta: {x: 992, y: 506}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1107377352
@@ -3121,7 +3120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55de4af18bad4d340ac48b2ef423435e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 15
+  jumpForce: 10
   jumpDelay: 0.25
   runningJumpForce: 5
   groundLayer:
