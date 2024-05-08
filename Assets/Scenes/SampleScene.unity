@@ -2463,7 +2463,7 @@ RectTransform:
   m_GameObject: {fileID: 448620699}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.18232131}
-  m_LocalScale: {x: -0.77849996, y: 0.9267634, z: 1}
+  m_LocalScale: {x: -1.0120499, y: 0.9267634, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1107377351}
@@ -2685,6 +2685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1550383567}
+  healthBar: {fileID: 1107377351}
   smoothSpeed: 0.125
   offset: {x: 0, y: 0, z: -10}
 --- !u!1001 &724135730
@@ -2886,7 +2887,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2905,34 +2906,34 @@ MonoBehaviour:
   slider: {fileID: 1107377352}
   gradient:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
+    key0: {r: 1, g: 0, b: 0.008527756, a: 1}
+    key1: {r: 1, g: 0.9844445, b: 0, a: 1}
+    key2: {r: 0.28872943, g: 1, b: 0, a: 1}
+    key3: {r: 0, g: 0, b: 0, a: 1}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 0
-    ctime1: 65535
-    ctime2: 0
+    ctime1: 32896
+    ctime2: 65535
     ctime3: 0
     ctime4: 0
     ctime5: 0
     ctime6: 0
     ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
+    atime0: 12079
+    atime1: 20175
+    atime2: 46774
+    atime3: 65535
     atime4: 0
     atime5: 0
     atime6: 0
     atime7: 0
     m_Mode: 0
     m_ColorSpace: -1
-    m_NumColorKeys: 2
-    m_NumAlphaKeys: 2
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 4
   fill: {fileID: 448620701}
 --- !u!1 &1218634128
 GameObject:
@@ -3131,6 +3132,7 @@ MonoBehaviour:
   gravity: 1
   fallMultiplier: 5
   colliderOffset: {x: 1, y: 1, z: 0}
+  booletPrefab: {fileID: 0}
   speed: 15
 --- !u!50 &1550383564
 Rigidbody2D:
