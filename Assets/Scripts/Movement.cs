@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float jumpForce = 15f;
+    public float jumpForce = 10f;
     public float jumpDelay = 0.25f;
     public float runningJumpForce = 5f;
     public LayerMask groundLayer;
@@ -16,6 +16,9 @@ public class Movement : MonoBehaviour
     private bool onGround;
     private Rigidbody2D rb;
     private float jumpTimer;
+    public GameObject booletPrefab;
+
+    public ParticleSystem dust;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,17 +43,20 @@ public class Movement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
+            CreateDust();
             pos.x -= speed * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 180, 0);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
+            CreateDust();
             pos.x += speed * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         transform.position = pos;
     }
+
     void FixedUpdate()
     {
         if (jumpTimer > Time.time && onGround)
@@ -93,5 +99,9 @@ public class Movement : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position + colliderOffset, transform.position + colliderOffset + Vector3.down * groundLength);
         Gizmos.DrawLine(transform.position - colliderOffset, transform.position - colliderOffset + Vector3.down * groundLength);
+    }
+    void CreateDust()
+    {
+        dust.Play();
     }
 }

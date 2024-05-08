@@ -10,6 +10,7 @@ public class EnemyLogic : MonoBehaviour
 
     public float chaseSpeed = 10f;
     public float minDist = 1f;
+    public int hp = 4;
 
     public float agroDist = 5f;
     public float calmDist = 10f;
@@ -17,6 +18,11 @@ public class EnemyLogic : MonoBehaviour
     public float patrolSpeed = 5f;
     private Vector2 patrolPoint;
     bool movingRight = true;
+
+    public GameObject item;
+    private GameObject parentSpawner;
+    private IndependantSpawner spawnerIndep;
+    private GlobalSpawner spawnerGlobal;
 
     //State machine for patrol and chase
     private enum State
@@ -86,5 +92,44 @@ public class EnemyLogic : MonoBehaviour
         // Move in the current direction
         float moveX = movingRight ? patrolSpeed : -patrolSpeed;
         transform.position = new Vector2(transform.position.x + moveX * Time.deltaTime, transform.position.y);
+    }
+
+    public void setSpawner(GameObject spawner)
+    {
+        parentSpawner = spawner;
+        spawnerIndep = parentSpawner.GetComponent<IndependantSpawner>();
+        spawnerGlobal = spawner.GetComponent<GlobalSpawner>();
+    }
+
+    //For calculating varying levels of damage based on player stats
+    public void calculateDamage(int dmg)
+    {
+        Debug.Log("Hit!");
+        hp -= dmg;
+        if (hp <= 0)
+        {
+            if (spawnerGlobal != null)
+            {
+                //Destroy(gameObject);
+                spawnerGlobal.destroyEnemy();
+            }
+            else if (spawnerIndep != null)
+            {
+                //Destroy(gameObject);
+                spawnerIndep.destroyEnemy();
+            }
+            else
+            {
+                Debug.Log("No parent spawner found!");
+            }
+            DropItem();
+            Destroy(gameObject);
+        }
+    }
+
+    public void DropItem()
+    {
+        GameObject drop = Instantiate(item);
+        drop.transform.position = transform.position;
     }
 }

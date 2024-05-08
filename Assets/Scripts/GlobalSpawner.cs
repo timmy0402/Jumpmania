@@ -36,17 +36,18 @@ public class GlobalSpawner : MonoBehaviour
             int randEnemy = Random.Range(0, enemy.Length); //Randomly select enemy from array of types
             int spawnpoint = Random.Range(0, spawnpoints.Length); //Randomly select spawnpoint
 
-            //Switch for different enemy prefabs. Only one lonely enemy type so far :(
-            switch (randEnemy)
-            {
-                case 0:
-                    newEnemy = Instantiate(enemy[randEnemy]);
-                    numEnemy++;
-                    break;
-            }
+            newEnemy = Instantiate(enemy[randEnemy]);
+            numEnemy++;
+
+            EnemyLogic enemyLogic = newEnemy.GetComponent<EnemyLogic>();
+            enemyLogic.setSpawner(gameObject);
 
             newEnemy.transform.position = spawnpoints[spawnpoint].transform.position;
             timer = Time.time + spawnCooldown;
         }
+    }
+    public void destroyEnemy()
+    {
+        numEnemy--;
     }
 }

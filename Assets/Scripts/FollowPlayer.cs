@@ -5,7 +5,6 @@ using UnityEngine;
 public class FollowPlayer : MonoBehaviour
 {
     public Transform player;
-
     public float smoothSpeed = 0.125f;
     public Vector3 offset;
 
