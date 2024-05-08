@@ -15,6 +15,10 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            currentHealth -= 15;
+            healthBar.SetHealth(currentHealth);
+        }
     }
 }
