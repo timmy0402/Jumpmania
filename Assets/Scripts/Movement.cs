@@ -17,6 +17,8 @@ public class Movement : MonoBehaviour
     private Rigidbody2D rb;
     private float jumpTimer;
     public GameObject booletPrefab;
+
+    public ParticleSystem dust;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,12 +43,14 @@ public class Movement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
+            CreateDust();
             pos.x -= speed * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 180, 0);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
+            CreateDust();
             pos.x += speed * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
@@ -123,5 +127,9 @@ public class Movement : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position + colliderOffset, transform.position + colliderOffset + Vector3.down * groundLength);
         Gizmos.DrawLine(transform.position - colliderOffset, transform.position - colliderOffset + Vector3.down * groundLength);
+    }
+    void CreateDust()
+    {
+        dust.Play();
     }
 }
