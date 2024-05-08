@@ -24,7 +24,8 @@ public class CoinCollecting : MonoBehaviour
         {
             numberOfCoins++;
             Destroy(collision.gameObject);
-            coinScore.text = "Score: " + numberOfCoins;
+            //coinScore.text = "Score: " + numberOfCoins;
+            Debug.Log("Score: " +  numberOfCoins);
         }
     }
 }
