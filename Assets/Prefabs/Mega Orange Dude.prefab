@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3449032169575470737}
   - component: {fileID: -3751733310226060901}
   - component: {fileID: 3964318980584763881}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mega Orange Dude
   m_TagString: Enemy
   m_Icon: {fileID: 0}

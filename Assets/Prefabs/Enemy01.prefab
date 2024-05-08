@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1973603388280036299}
   - component: {fileID: 4522518039343270946}
   - component: {fileID: 1895267670366479414}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Enemy01
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -132,7 +132,6 @@ MonoBehaviour:
   minDist: 1
   hp: 4
   eStrength: 15
-  knockback: 10
   agroDist: 10
   calmDist: 15
   patrolDist: 10
