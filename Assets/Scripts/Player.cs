@@ -4,13 +4,14 @@ public class Player : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
-
+    private GameController gameController;
     public HealthBar healthBar;
     public float iframe = 2f;
     private float timer;
 
     private void Start()
     {
+        gameController = FindObjectOfType<GameController>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
@@ -35,6 +36,14 @@ public class Player : MonoBehaviour
                 Debug.Log("Game Over!");
             }
             timer = Time.time + iframe;
+        }
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Coin")
+        {
+            Destroy(other.gameObject);
+            gameController.coins++;
         }
     }
 }
