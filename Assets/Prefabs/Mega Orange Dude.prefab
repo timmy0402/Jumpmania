@@ -104,6 +104,7 @@ MonoBehaviour:
   chaseSpeed: 5
   minDist: 3
   hp: 30
+  eStrength: 35
   agroDist: 10
   calmDist: 20
   patrolDist: 10
