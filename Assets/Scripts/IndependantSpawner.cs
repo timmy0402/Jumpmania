@@ -4,7 +4,7 @@ public class IndependantSpawner : MonoBehaviour
 {
     public GameObject enemyType;
     private GameObject newEnemy;
-    public float spawnCooldown = 5;
+    public float spawnCooldown = 5f;
     private float timer;
     public int maxEnemy = 4;
     private int numEnemy;
@@ -12,6 +12,9 @@ public class IndependantSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Make spawnpoints invisible when game runs
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        sr.enabled = false;
     }
 
     // Update is called once per frame

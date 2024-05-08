@@ -19,6 +19,7 @@ public class EnemyLogic : MonoBehaviour
     private Vector2 patrolPoint;
     bool movingRight = true;
 
+    public GameObject item;
     private GameObject parentSpawner;
     private IndependantSpawner spawnerIndep;
     private GlobalSpawner spawnerGlobal;
@@ -109,18 +110,26 @@ public class EnemyLogic : MonoBehaviour
         {
             if (spawnerGlobal != null)
             {
-                Destroy(gameObject);
+                //Destroy(gameObject);
                 spawnerGlobal.destroyEnemy();
             }
             else if (spawnerIndep != null)
             {
-                Destroy(gameObject);
+                //Destroy(gameObject);
                 spawnerIndep.destroyEnemy();
             }
             else
             {
                 Debug.Log("No parent spawner found!");
             }
+            DropItem();
+            Destroy(gameObject);
         }
+    }
+
+    public void DropItem()
+    {
+        GameObject drop = Instantiate(item);
+        drop.transform.position = transform.position;
     }
 }

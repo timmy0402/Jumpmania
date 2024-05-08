@@ -2685,7 +2685,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1550383567}
-  healthBar: {fileID: 1107377351}
   smoothSpeed: 0.125
   offset: {x: 0, y: 0, z: -10}
 --- !u!1001 &724135730
@@ -2935,6 +2934,75 @@ MonoBehaviour:
     m_NumColorKeys: 3
     m_NumAlphaKeys: 4
   fill: {fileID: 448620701}
+--- !u!1001 &1185888210
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5218480425361494652, guid: 4381683a6bb12054c83a3dfc8e299a1b, type: 3}
+      propertyPath: m_Name
+      value: IndependantSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 6233408725181247709, guid: 4381683a6bb12054c83a3dfc8e299a1b, type: 3}
+      propertyPath: maxEnemy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6233408725181247709, guid: 4381683a6bb12054c83a3dfc8e299a1b, type: 3}
+      propertyPath: enemyType
+      value: 
+      objectReference: {fileID: 5849221681589398898, guid: 991357881cb92d44ead98f908b32dc17, type: 3}
+    - target: {fileID: 6233408725181247709, guid: 4381683a6bb12054c83a3dfc8e299a1b, type: 3}
+      propertyPath: spawnCooldown
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492966500798506359, guid: 4381683a6bb12054c83a3dfc8e299a1b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0055805445
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492966500798506359, guid: 4381683a6bb12054c83a3dfc8e299a1b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13.109557
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492966500798506359, guid: 4381683a6bb12054c83a3dfc8e299a1b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492966500798506359, guid: 4381683a6bb12054c83a3dfc8e299a1b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492966500798506359, guid: 4381683a6bb12054c83a3dfc8e299a1b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492966500798506359, guid: 4381683a6bb12054c83a3dfc8e299a1b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492966500798506359, guid: 4381683a6bb12054c83a3dfc8e299a1b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492966500798506359, guid: 4381683a6bb12054c83a3dfc8e299a1b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492966500798506359, guid: 4381683a6bb12054c83a3dfc8e299a1b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492966500798506359, guid: 4381683a6bb12054c83a3dfc8e299a1b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4381683a6bb12054c83a3dfc8e299a1b, type: 3}
 --- !u!1 &1218634128
 GameObject:
   m_ObjectHideFlags: 0
@@ -3056,6 +3124,7 @@ GameObject:
   - component: {fileID: 1550383568}
   - component: {fileID: 1550383563}
   - component: {fileID: 1550383562}
+  - component: {fileID: 1550383569}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -3132,7 +3201,6 @@ MonoBehaviour:
   gravity: 1
   fallMultiplier: 5
   colliderOffset: {x: 1, y: 1, z: 0}
-  booletPrefab: {fileID: 0}
   speed: 15
 --- !u!50 &1550383564
 Rigidbody2D:
@@ -3160,7 +3228,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &1550383565
 Animator:
   serializedVersion: 7
@@ -3267,6 +3335,19 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 1107377353}
+--- !u!114 &1550383569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550383561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bab98f81bed04c842931c618ce8160d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  booletPrefab: {fileID: 9050237730369118198, guid: c2986e522d3870f43984cfac2c9c9cbf, type: 3}
 --- !u!1 &2048852763
 GameObject:
   m_ObjectHideFlags: 0
@@ -3506,3 +3587,4 @@ SceneRoots:
   - {fileID: 2129344099}
   - {fileID: 406209655}
   - {fileID: 467039558}
+  - {fileID: 1185888210}

@@ -130,10 +130,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chaseSpeed: 10
   minDist: 1
+  hp: 4
   agroDist: 10
   calmDist: 15
   patrolDist: 10
   patrolSpeed: 3
+  item: {fileID: 1189133900669027549, guid: 53468e19c56dbfa40896789e1d741fdc, type: 3}
 --- !u!61 &1895267670366479414
 BoxCollider2D:
   m_ObjectHideFlags: 0
