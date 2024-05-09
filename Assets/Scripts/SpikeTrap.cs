@@ -24,13 +24,8 @@ public class SpikeTrap : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            //Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
-            //Vector2 knockbackDirection = collision.transform.position - transform.position;
-            //
-
             Player playerHealth = collision.gameObject.GetComponent<Player>();
             playerHealth.DamagePlayer(damage);
-            //rb.AddForce(knockbackDirection.normalized * knockback, ForceMode2D.Impulse);
         }
     }
 }

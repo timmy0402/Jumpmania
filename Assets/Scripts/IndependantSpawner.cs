@@ -15,6 +15,9 @@ public class IndependantSpawner : MonoBehaviour
         //Make spawnpoints invisible when game runs
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
         sr.enabled = false;
+
+        //Waiting period before first spawn
+        timer = spawnCooldown + Time.time;
     }
 
     // Update is called once per frame

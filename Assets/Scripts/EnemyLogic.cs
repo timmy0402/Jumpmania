@@ -12,7 +12,6 @@ public class EnemyLogic : MonoBehaviour
     public float minDist = 1f;
     public int hp = 4;
     public int eStrength;
-    //public float knockback;
 
     public float agroDist = 5f;
     public float calmDist = 10f;
@@ -105,13 +104,11 @@ public class EnemyLogic : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            //Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
-            //Vector2 knockbackDirection = collision.transform.position - transform.position;
-            //knockbackDirection.y = 0;
-
             Player playerHealth = collision.gameObject.GetComponent<Player>();
             playerHealth.DamagePlayer(eStrength);
-            //rb.AddForce(knockbackDirection.normalized * knockback, ForceMode2D.Impulse);
+            Knockback knockback = collision.gameObject.GetComponent<Knockback>();
+            knockback.PlayFeedback(gameObject);
+
         }
     }
     //For calculating varying levels of damage based on player stats
