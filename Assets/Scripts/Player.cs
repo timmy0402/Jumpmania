@@ -23,6 +23,12 @@ public class Player : MonoBehaviour
             currentHealth -= 15;
             healthBar.SetHealth(currentHealth);
         }
+
+        if (currentHealth <= 0)
+        {
+            Time.timeScale = 0;
+            Destroy(gameObject);
+        }
     }
 
     public void DamagePlayer(int damage)
