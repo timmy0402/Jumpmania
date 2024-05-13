@@ -114,7 +114,6 @@ public class EnemyLogic : MonoBehaviour
             playerHealth.DamagePlayer(eStrength);
             Knockback knockback = collision.gameObject.GetComponent<Knockback>();
             knockback.PlayFeedback(gameObject);
-
         }
     }
 

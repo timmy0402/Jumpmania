@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 9068880535983026340}
   - component: {fileID: 9161331231026720188}
   - component: {fileID: 1973603388280036299}
-  - component: {fileID: 4522518039343270946}
   - component: {fileID: 1895267670366479414}
+  - component: {fileID: 4522518039343270946}
+  - component: {fileID: 4202543807931963563}
   m_Layer: 8
   m_Name: Enemy01
   m_TagString: Enemy
@@ -116,27 +117,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &4522518039343270946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7584051062487928242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc9a8f3cf9890c445a6f70a9e028faa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chaseSpeed: 5
-  minDist: 1
-  hp: 4
-  eStrength: 15
-  agroDist: 10
-  calmDist: 15
-  patrolDist: 10
-  patrolSpeed: 3
-  item: {fileID: 1189133900669027549, guid: 53468e19c56dbfa40896789e1d741fdc, type: 3}
 --- !u!61 &1895267670366479414
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -183,3 +163,68 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.87910867, y: 0.8629899}
   m_EdgeRadius: 0
+--- !u!114 &4522518039343270946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7584051062487928242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc9a8f3cf9890c445a6f70a9e028faa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseSpeed: 5
+  minDist: 1
+  hp: 4
+  eStrength: 15
+  agroDist: 10
+  calmDist: 15
+  patrolDist: 10
+  patrolSpeed: 3
+  item: {fileID: 1189133900669027549, guid: 53468e19c56dbfa40896789e1d741fdc, type: 3}
+--- !u!114 &4202543807931963563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7584051062487928242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a52c2910d1c3d494694b8c7aaf64c2df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1973603388280036299}
+  strength: 5
+  OnBegin:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4522518039343270946}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDone:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4522518039343270946}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2

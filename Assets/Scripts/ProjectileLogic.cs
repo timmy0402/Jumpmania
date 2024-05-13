@@ -26,6 +26,9 @@ public class ProjectileLogic : MonoBehaviour
             EnemyLogic enemy = collision.gameObject.GetComponent<EnemyLogic>();
             enemy.calculateDamage(shootScript.damage);
             Destroy(gameObject);
+
+            Knockback knockback = collision.gameObject.GetComponent<Knockback>();
+            knockback.PlayFeedback(gameObject);
         }
     }
 
