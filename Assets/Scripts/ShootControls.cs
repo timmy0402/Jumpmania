@@ -5,9 +5,14 @@ using UnityEngine;
 public class ShootControls : MonoBehaviour
 {
     public GameObject booletPrefab;
+
     Vector3 mousePosition;
     Vector3 objectPosition;
     private float angle;
+
+    public int damage = 1;
+
+
     // Start is called before the first frame update
     void Start()
     {
