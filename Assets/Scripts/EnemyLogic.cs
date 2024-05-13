@@ -44,6 +44,12 @@ public class EnemyLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (transform.position.y < -10)
+        {
+            spawnerGlobal.destroyEnemy();
+            Destroy(gameObject);
+        }
+
         switch (curState)
         {
             case State.Patrol:
@@ -111,6 +117,7 @@ public class EnemyLogic : MonoBehaviour
 
         }
     }
+
     //For calculating varying levels of damage based on player stats
     public void calculateDamage(int dmg)
     {
