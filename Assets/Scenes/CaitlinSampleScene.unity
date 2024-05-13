@@ -12107,7 +12107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1550383564}
-  strength: 15
+  strength: 10
   OnBegin:
     m_PersistentCalls:
       m_Calls:

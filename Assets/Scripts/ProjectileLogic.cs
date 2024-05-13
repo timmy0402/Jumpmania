@@ -15,7 +15,6 @@ public class ProjectileLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //transform.position += transform.up * (speed * Time.smoothDeltaTime);
         transform.position += (Vector3)direction * (speed * Time.smoothDeltaTime);
     }
 
