@@ -45,5 +45,11 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject);
             gameController.coins++;
         }
+        if(other.tag == "Heart")
+        {
+            Destroy(other.gameObject);
+            currentHealth += 10;
+            healthBar.SetHealth(currentHealth);
+        }
     }
 }
