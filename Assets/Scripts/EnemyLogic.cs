@@ -1,18 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 using static UnityEngine.GraphicsBuffer;
 
 public class EnemyLogic : MonoBehaviour
 {
     private GameObject player;
     private Vector2 target;
+    public GameObject booletPrefab;
 
     public float chaseSpeed = 10f;
     public float minDist = 1f;
     public int hp = 4;
     public int eStrength;
+    public float shootCooldown = 5f;
+    private float timer;
 
+    public bool shooter = false;
     public float agroDist = 5f;
     public float calmDist = 10f;
     public float patrolDist = 10f;
@@ -79,6 +85,13 @@ public class EnemyLogic : MonoBehaviour
         {
             target = new Vector2(player.transform.position.x, transform.position.y); //Only get the x so they dont start hovering
             transform.position = Vector2.MoveTowards(transform.position, target, Time.deltaTime * chaseSpeed);
+
+            if (shooter && Time.time > timer)
+            {
+                timer = Time.time + shootCooldown;
+
+                //Still need to add shooting stuff
+            }
         }
     }
 
