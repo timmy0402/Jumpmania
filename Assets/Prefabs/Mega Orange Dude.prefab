@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3967674580500825021}
   - component: {fileID: 6260318365842302065}
-  - component: {fileID: 3449032169575470737}
   - component: {fileID: -3751733310226060901}
   - component: {fileID: 3964318980584763881}
+  - component: {fileID: 3449032169575470737}
+  - component: {fileID: -6468065593529524508}
   m_Layer: 8
   m_Name: Mega Orange Dude
   m_TagString: Enemy
@@ -89,27 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3449032169575470737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5849221681589398898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc9a8f3cf9890c445a6f70a9e028faa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chaseSpeed: 5
-  minDist: 3
-  hp: 30
-  eStrength: 35
-  agroDist: 10
-  calmDist: 20
-  patrolDist: 10
-  patrolSpeed: 2
-  item: {fileID: 1189133900669027549, guid: 53468e19c56dbfa40896789e1d741fdc, type: 3}
 --- !u!50 &-3751733310226060901
 Rigidbody2D:
   serializedVersion: 4
@@ -188,3 +168,68 @@ PolygonCollider2D:
       - {x: 0, y: -0.25}
       - {x: 0.5, y: 0}
   m_UseDelaunayMesh: 0
+--- !u!114 &3449032169575470737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5849221681589398898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc9a8f3cf9890c445a6f70a9e028faa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseSpeed: 5
+  minDist: 3
+  hp: 30
+  eStrength: 35
+  agroDist: 10
+  calmDist: 20
+  patrolDist: 10
+  patrolSpeed: 2
+  item: {fileID: 1189133900669027549, guid: 53468e19c56dbfa40896789e1d741fdc, type: 3}
+--- !u!114 &-6468065593529524508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5849221681589398898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a52c2910d1c3d494694b8c7aaf64c2df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: -3751733310226060901}
+  strength: 3
+  OnBegin:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3449032169575470737}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDone:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3449032169575470737}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
