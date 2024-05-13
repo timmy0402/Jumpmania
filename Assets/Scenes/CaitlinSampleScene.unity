@@ -11654,7 +11654,6 @@ GameObject:
   - component: {fileID: 1550383568}
   - component: {fileID: 1550383563}
   - component: {fileID: 1550383569}
-  - component: {fileID: 1550383570}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -11730,7 +11729,7 @@ MonoBehaviour:
   linearDrag: 4
   gravity: 1
   fallMultiplier: 5
-  colliderOffset: {x: 0, y: 1, z: 0}
+  colliderOffset: {x: 0, y: 0.25, z: 0}
   dust: {fileID: 947580573}
   speed: 10
 --- !u!50 &1550383564
@@ -12161,8 +12160,8 @@ Transform:
   - {fileID: 1966512239}
   - {fileID: 16218936}
   - {fileID: 906143127}
-  - {fileID: 1603429744}
   - {fileID: 1430780690}
+  - {fileID: 1966718026}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1947267878 stripped
@@ -12231,6 +12230,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5669944101039706703, guid: 898e22747d027f343b03dfddb25b1936, type: 3}
   m_PrefabInstance: {fileID: 2129344099}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1966718026 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5669944101039706703, guid: 898e22747d027f343b03dfddb25b1936, type: 3}
+  m_PrefabInstance: {fileID: 1700077181}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1972660239
 PrefabInstance:
