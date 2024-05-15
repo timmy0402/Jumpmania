@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
         gameController = FindObjectOfType<GameController>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        
     }
 
     private void Update()
