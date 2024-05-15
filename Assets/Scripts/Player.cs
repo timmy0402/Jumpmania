@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
             healthBar.SetHealth(currentHealth);
         }
 
-        if (currentHealth <= 0 )
+        if (currentHealth <= 0)
         {
             Time.timeScale = 0;
             Destroy(gameObject);
@@ -59,7 +59,7 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject);
             gameController.coins++;
         }
-        if(other.tag == "Heart")
+        if (other.tag == "Heart")
         {
             Destroy(other.gameObject);
             currentHealth += 10;
