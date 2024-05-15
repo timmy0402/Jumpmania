@@ -9,6 +9,7 @@ public class EnemyLogic : MonoBehaviour
 {
     private GameObject player;
     private Vector2 target;
+    private Movement movement;
     public GameObject booletPrefab;
 
     public float chaseSpeed = 10f;
@@ -34,7 +35,7 @@ public class EnemyLogic : MonoBehaviour
     //State machine for patrol and chase
     private enum State
     {
-        Patrol, 
+        Patrol,
         Chase
     }
     private State curState;
@@ -43,8 +44,9 @@ public class EnemyLogic : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+        movement = FindAnyObjectByType<Movement>();
         patrolPoint = transform.position;
-        curState = State.Patrol;    
+        curState = State.Patrol;
     }
 
     // Update is called once per frame
@@ -63,7 +65,10 @@ public class EnemyLogic : MonoBehaviour
                 //If player gets too close, chase
                 if (Vector2.Distance(transform.position, player.transform.position) < agroDist)
                 {
-                    curState = State.Chase;
+                    if (movement.onGround)
+                    {
+                        curState = State.Chase;
+                    }
                 }
                 break;
             case State.Chase:
@@ -100,7 +105,7 @@ public class EnemyLogic : MonoBehaviour
         //If end of patrol is reached, change direction. Maybe add short pause at end of patrol?
         if (movingRight && transform.position.x >= patrolPoint.x + patrolDist)
         {
-            movingRight = false; 
+            movingRight = false;
         }
         else if (transform.position.x <= patrolPoint.x - patrolDist)
         {

@@ -13,7 +13,7 @@ public class Movement : MonoBehaviour
     public float gravity = 1;
     public float fallMultiplier = 5f;
     public Vector3 colliderOffset;
-    private bool onGround;
+    public bool onGround;
     private Rigidbody2D rb;
     private float jumpTimer;
 
