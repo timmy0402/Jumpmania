@@ -734,7 +734,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: P to open shop and Q to open chest
+  m_Text: P to open shop and E to open chest
 --- !u!222 &1763423657
 CanvasRenderer:
   m_ObjectHideFlags: 0
