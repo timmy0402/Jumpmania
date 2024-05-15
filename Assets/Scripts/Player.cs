@@ -16,7 +16,6 @@ public class Player : MonoBehaviour
         gameController = FindObjectOfType<GameController>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
-        spawn = GameObject.FindWithTag("Respawn");
     }
 
     private void Update()
