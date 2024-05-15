@@ -5,18 +5,16 @@ using UnityEngine;
 public class ShootControls : MonoBehaviour
 {
     public GameObject booletPrefab;
-
     Vector3 mousePosition;
     Vector3 objectPosition;
     private float angle;
-
+    private GameController gameController;
     public int damage = 1;
-
-
+    private bool shotgunUpgraded = false;
     // Start is called before the first frame update
     void Start()
     {
-
+        gameController = FindAnyObjectByType<GameController>();
     }
 
     // Update is called once per frame
@@ -25,8 +23,22 @@ public class ShootControls : MonoBehaviour
         //Shooting stuff
         if (Input.GetMouseButtonDown(0))
         {
-            //shootBoolet();
-            shotgun();
+            if (!shotgunUpgraded)
+            {
+                shootBoolet();
+            }
+            else
+            {
+                shotgun();
+            }
+        }
+    }
+    public void UpdateGun()
+    {
+        if (gameController.coins >= 4)
+        {
+            gameController.coins -= 4;
+            shotgunUpgraded = true;
         }
     }
     private void shootBoolet()
