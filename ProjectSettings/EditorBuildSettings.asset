@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene2.unity
     guid: 16a7321253387494e81b90a71cb21bda
+  - enabled: 0
+    path: Assets/Scenes/CaitlinSampleScene 1.unity
+    guid: 9e71a274948602b488a2705ba79985bb
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
