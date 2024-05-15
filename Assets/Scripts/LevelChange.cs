@@ -21,7 +21,7 @@ public class LevelChange : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            SceneManager.LoadScene(sceneIndex, LoadSceneMode.Single);
+            SceneManager.LoadScene(sceneIndex);
         }
     }
 }
