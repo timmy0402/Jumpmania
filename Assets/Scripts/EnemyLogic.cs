@@ -13,11 +13,12 @@ public class EnemyLogic : MonoBehaviour
     public GameObject booletPrefab;
 
     public float chaseSpeed = 10f;
-    public float minDist = 1f;
     public int hp = 4;
-    public int eStrength;
+    public int eStrength = 10;
+    public int projDmg = 5;
     public float shootCooldown = 5f;
-    private float timer;
+    private float knockbackTimer;
+    private float shootTimer;
 
     public bool shooter = false;
     public float agroDist = 5f;
@@ -86,17 +87,13 @@ public class EnemyLogic : MonoBehaviour
     private void Chase()
     {
         //Follow player within minDist distance.
-        if (Vector2.Distance(transform.position, player.transform.position) > minDist)
+        target = new Vector2(player.transform.position.x, transform.position.y); //Only get the x so they dont start hovering
+        transform.position = Vector2.MoveTowards(transform.position, target, Time.deltaTime * chaseSpeed);
+
+        if (shooter && Time.time > shootTimer)
         {
-            target = new Vector2(player.transform.position.x, transform.position.y); //Only get the x so they dont start hovering
-            transform.position = Vector2.MoveTowards(transform.position, target, Time.deltaTime * chaseSpeed);
-
-            if (shooter && Time.time > timer)
-            {
-                timer = Time.time + shootCooldown;
-
-                //Still need to add shooting stuff
-            }
+            shootTimer = Time.time + shootCooldown;
+            shootAtPlayer();
         }
     }
 
@@ -117,6 +114,21 @@ public class EnemyLogic : MonoBehaviour
         transform.position = new Vector2(transform.position.x + moveX * Time.deltaTime, transform.position.y);
     }
 
+    private void shootAtPlayer()
+    {
+        Vector3 playerPosition = player.transform.position;
+        Vector3 directionToPlayer = playerPosition - transform.position;
+        float angle = Mathf.Atan2(directionToPlayer.y, directionToPlayer.x) * Mathf.Rad2Deg;
+
+        GameObject boolet = Instantiate(booletPrefab, transform.position, Quaternion.Euler(new Vector3(0, 0, angle)));
+        boolet.GetComponent<EnemyProjectile>().setOwner(gameObject);
+
+        // Set the direction for the projectile logic
+        EnemyProjectile enemyProjectile = boolet.GetComponent<EnemyProjectile>();
+        enemyProjectile.Direction(new Vector2(directionToPlayer.x, directionToPlayer.y));
+    }
+
+
     public void setSpawner(GameObject spawner)
     {
         parentSpawner = spawner;
@@ -130,8 +142,13 @@ public class EnemyLogic : MonoBehaviour
         {
             Player playerHealth = collision.gameObject.GetComponent<Player>();
             playerHealth.DamagePlayer(eStrength);
-            Knockback knockback = collision.gameObject.GetComponent<Knockback>();
-            knockback.PlayFeedback(gameObject);
+            if (knockbackTimer < Time.time)
+            {
+                knockbackTimer = Time.time + .5f;
+                Knockback knockback = collision.gameObject.GetComponent<Knockback>();
+                knockback.PlayFeedback(gameObject);
+            }
+
         }
     }
 

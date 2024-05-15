@@ -18368,7 +18368,7 @@ PrefabInstance:
       objectReference: {fileID: 5849221681589398898, guid: 991357881cb92d44ead98f908b32dc17, type: 3}
     - target: {fileID: 6233408725181247709, guid: 4381683a6bb12054c83a3dfc8e299a1b, type: 3}
       propertyPath: spawnCooldown
-      value: 40
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7492966500798506359, guid: 4381683a6bb12054c83a3dfc8e299a1b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19139,6 +19139,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   booletPrefab: {fileID: 9050237730369118198, guid: c2986e522d3870f43984cfac2c9c9cbf, type: 3}
+  damage: 1
+--- !u!114 &1550383570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550383561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a52c2910d1c3d494694b8c7aaf64c2df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1550383564}
+  strength: 15
+  OnBegin:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1550383563}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDone:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1550383563}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!4 &1603429744 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5669944101039706703, guid: 898e22747d027f343b03dfddb25b1936, type: 3}
@@ -19489,17 +19534,12 @@ Transform:
   - {fileID: 1430780690}
   - {fileID: 756210413}
   - {fileID: 2023958961}
-  - {fileID: 1591208949}
   - {fileID: 152029677}
   - {fileID: 1629919313}
   - {fileID: 1406051222}
+  - {fileID: 1603429744}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1885661604 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5669944101039706703, guid: 898e22747d027f343b03dfddb25b1936, type: 3}
-  m_PrefabInstance: {fileID: 1700077181}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1947267878 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5669944101039706703, guid: 898e22747d027f343b03dfddb25b1936, type: 3}
@@ -20238,3 +20278,5 @@ SceneRoots:
   - {fileID: 1861001911}
   - {fileID: 1141351353}
   - {fileID: 1490891244}
+  - {fileID: 978442883}
+  - {fileID: 1116649364}
