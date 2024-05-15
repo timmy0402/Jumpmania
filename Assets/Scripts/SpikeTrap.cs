@@ -26,6 +26,9 @@ public class SpikeTrap : MonoBehaviour
         {
             Player playerHealth = collision.gameObject.GetComponent<Player>();
             playerHealth.DamagePlayer(damage);
+
+            Knockback knockback = collision.gameObject.GetComponent<Knockback>();
+            knockback.PlayFeedback(gameObject);
         }
     }
 }
