@@ -3,19 +3,18 @@ using UnityEngine;
 public class ProjectileLogic : MonoBehaviour
 {
     public float speed = 25f;
-    public int damage = 1;
     private Vector2 direction;
+    private ShootControls shootScript;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        shootScript = GameObject.FindWithTag("Player").GetComponent<ShootControls>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //transform.position += transform.up * (speed * Time.smoothDeltaTime);
         transform.position += (Vector3)direction * (speed * Time.smoothDeltaTime);
     }
 
@@ -24,8 +23,11 @@ public class ProjectileLogic : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             EnemyLogic enemy = collision.gameObject.GetComponent<EnemyLogic>();
-            enemy.calculateDamage(damage);
+            enemy.calculateDamage(shootScript.damage);
             Destroy(gameObject);
+
+            Knockback knockback = collision.gameObject.GetComponent<Knockback>();
+            knockback.PlayFeedback(gameObject);
         }
     }
 
