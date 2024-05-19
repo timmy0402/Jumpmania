@@ -101,4 +101,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyType: {fileID: 0}
   spawnCooldown: 5
-  maxEnemy: 4
+  maxEnemy: 2

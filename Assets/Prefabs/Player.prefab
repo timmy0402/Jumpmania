@@ -5059,8 +5059,9 @@ MonoBehaviour:
   gravity: 1
   fallMultiplier: 5
   colliderOffset: {x: 0, y: 1, z: 0}
+  onGround: 0
   dust: {fileID: 3560753193938001758}
-  speed: 5
+  speed: 8
 --- !u!114 &4026540722544022011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5074,3 +5075,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   booletPrefab: {fileID: 9050237730369118198, guid: c2986e522d3870f43984cfac2c9c9cbf, type: 3}
+  damage: 1
