@@ -25,6 +25,7 @@ public class EnemyLogic : MonoBehaviour
     public float calmDist = 10f;
     public float patrolDist = 10f;
     public float patrolSpeed = 5f;
+    private float patrolTimer;
     private Vector2 patrolPoint;
     bool movingRight = true;
 
@@ -99,14 +100,12 @@ public class EnemyLogic : MonoBehaviour
 
     private void Patrol()
     {
+        patrolTimer += Time.deltaTime;
         //If end of patrol is reached, change direction. Maybe add short pause at end of patrol?
-        if (movingRight && transform.position.x >= patrolPoint.x + patrolDist)
+        if (patrolTimer > patrolDist)
         {
-            movingRight = false;
-        }
-        else if (transform.position.x <= patrolPoint.x - patrolDist)
-        {
-            movingRight = true;
+            movingRight = !movingRight;
+            patrolTimer = 0;
         }
 
         // Move in the current direction
