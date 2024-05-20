@@ -1670,6 +1670,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8285885885115340246, guid: 68d9002cb80394c448278896f7b0c8d7, type: 3}
+      propertyPath: iframe
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285885885115340246, guid: 68d9002cb80394c448278896f7b0c8d7, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1627593914}
