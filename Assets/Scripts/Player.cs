@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public HealthBar healthBar;
     public float iframe = 2f;
     private float timer;
-    private GameObject spawn;
+    private Vector2 spawn = new Vector2(-17f, -3.3f);
 
     private void Start()
     {
@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
 
         if (transform.position.y < -10)
         {
-            transform.position = spawn.transform.position;
+            transform.position = spawn;
         }
     }
 
