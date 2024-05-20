@@ -177,7 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   booletPrefab: {fileID: 0}
   chaseSpeed: 5
-  hp: 4
+  hp: 100
   eStrength: 15
   projDmg: 5
   shootCooldown: 5

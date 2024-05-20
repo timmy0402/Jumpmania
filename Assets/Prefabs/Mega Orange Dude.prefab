@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3964318980584763881}
   - component: {fileID: 3449032169575470737}
   - component: {fileID: -6468065593529524508}
+  - component: {fileID: -385994922557426529}
   m_Layer: 8
   m_Name: Mega Orange Dude
   m_TagString: Enemy
@@ -182,10 +183,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   booletPrefab: {fileID: 4208999266327032371, guid: f22fcafd857213f408ca0ea2ae287a72, type: 3}
   chaseSpeed: 5
-  hp: 30
+  hp: 1000
   eStrength: 35
   projDmg: 20
-  shootCooldown: 1
+  shootCooldown: 3
   shooter: 1
   agroDist: 20
   calmDist: 25
@@ -236,3 +237,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &-385994922557426529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5849221681589398898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec69edecfefe39c488d03ef7298331d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 5
+  item: {fileID: 1189133900669027549, guid: 53468e19c56dbfa40896789e1d741fdc, type: 3}
