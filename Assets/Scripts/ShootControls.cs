@@ -11,10 +11,12 @@ public class ShootControls : MonoBehaviour
     private GameController gameController;
     public int damage = 1;
     private bool shotgunUpgraded = false;
+    private ButtonController buttonController;
     // Start is called before the first frame update
     void Start()
     {
         gameController = FindAnyObjectByType<GameController>();
+        buttonController = FindAnyObjectByType<ButtonController>();
     }
 
     // Update is called once per frame
@@ -37,6 +39,7 @@ public class ShootControls : MonoBehaviour
     {
         if (gameController.coins >= 4)
         {
+            buttonController.button1.gameObject.SetActive(false);
             gameController.coins -= 4;
             shotgunUpgraded = true;
         }
