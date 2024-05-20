@@ -46,10 +46,10 @@ public class ShootControls : MonoBehaviour
     }
     public void UpdateGun()
     {
-        if (gameController.coins >= 10)
+        if (gameController.coins >= 7)
         {
             buttonController.button1.gameObject.SetActive(false);
-            gameController.coins -= 4;
+            gameController.coins -= 7;
             shotgunUpgraded = true;
         }
     }
