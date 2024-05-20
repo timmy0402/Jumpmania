@@ -6,5 +6,5 @@ using UnityEngine.UI;
 public class ButtonController : MonoBehaviour
 {
     public Button button1;
-    //public Button button2;
+    public Button button2;
 }
