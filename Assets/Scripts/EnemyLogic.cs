@@ -56,7 +56,14 @@ public class EnemyLogic : MonoBehaviour
     {
         if (transform.position.y < -10)
         {
-            spawnerGlobal.destroyEnemy();
+            if (spawnerIndep)
+            {
+                spawnerIndep.destroyEnemy();
+            }
+            else
+            {
+                spawnerGlobal.destroyEnemy();
+            }
             Destroy(gameObject);
         }
 
