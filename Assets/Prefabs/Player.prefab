@@ -5093,7 +5093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55de4af18bad4d340ac48b2ef423435e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 10
+  jumpForce: 11
   jumpDelay: 0.25
   runningJumpForce: 5
   groundLayer:
@@ -5103,10 +5103,10 @@ MonoBehaviour:
   linearDrag: 4
   gravity: 1
   fallMultiplier: 5
-  colliderOffset: {x: 0, y: 1, z: 0}
+  colliderOffset: {x: 0, y: 0.25, z: 0}
   onGround: 0
   dust: {fileID: 3560753193938001758}
-  speed: 8
+  speed: 7
 --- !u!114 &4026540722544022011
 MonoBehaviour:
   m_ObjectHideFlags: 0
