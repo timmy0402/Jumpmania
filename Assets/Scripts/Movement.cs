@@ -26,7 +26,7 @@ public class Movement : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
-    public float speed = 5;
+    public float speed = 7;
     private float maxSpeed = 7;
     // Update is called once per frame
     void Update()

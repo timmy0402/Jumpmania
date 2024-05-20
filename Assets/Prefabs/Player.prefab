@@ -4845,6 +4845,7 @@ GameObject:
   - component: {fileID: 4182308937372437256}
   - component: {fileID: 1948881311681952597}
   - component: {fileID: 6487833293813904515}
+  - component: {fileID: -7623821885696819348}
   - component: {fileID: 8285885885115340246}
   - component: {fileID: 5688386364858425075}
   - component: {fileID: 4026540722544022011}
@@ -5020,6 +5021,50 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-7623821885696819348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6641736606389063078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a52c2910d1c3d494694b8c7aaf64c2df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1948881311681952597}
+  strength: 10
+  OnBegin:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5688386364858425075}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDone:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5688386364858425075}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &8285885885115340246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5059,8 +5104,9 @@ MonoBehaviour:
   gravity: 1
   fallMultiplier: 5
   colliderOffset: {x: 0, y: 1, z: 0}
+  onGround: 0
   dust: {fileID: 3560753193938001758}
-  speed: 5
+  speed: 8
 --- !u!114 &4026540722544022011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5074,3 +5120,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   booletPrefab: {fileID: 9050237730369118198, guid: c2986e522d3870f43984cfac2c9c9cbf, type: 3}
+  damage: 1

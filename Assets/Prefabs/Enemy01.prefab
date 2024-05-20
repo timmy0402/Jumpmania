@@ -175,13 +175,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc9a8f3cf9890c445a6f70a9e028faa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  booletPrefab: {fileID: 0}
   chaseSpeed: 5
-  minDist: 1
   hp: 4
   eStrength: 15
+  projDmg: 5
+  shootCooldown: 5
+  shooter: 0
   agroDist: 10
   calmDist: 15
-  patrolDist: 10
+  patrolDist: 5
   patrolSpeed: 3
   item: {fileID: 1189133900669027549, guid: 53468e19c56dbfa40896789e1d741fdc, type: 3}
 --- !u!114 &4202543807931963563
