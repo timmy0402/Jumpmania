@@ -15105,6 +15105,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1116649364}
     m_Modifications:
+    - target: {fileID: 2643805059267814035, guid: 06c7a91af77988e41ae4561aeff8c3a5, type: 3}
+      propertyPath: sceneIndex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5106009249413270204, guid: 06c7a91af77988e41ae4561aeff8c3a5, type: 3}
       propertyPath: m_Name
       value: FlagLevel
