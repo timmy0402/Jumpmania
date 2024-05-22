@@ -9,12 +9,14 @@ public class ShootControls : MonoBehaviour
     Vector3 objectPosition;
     private float angle;
     private GameController gameController;
-    public int damage = 1;
+    public int damage = 25;
     private bool shotgunUpgraded = false;
+    private ButtonController buttonController;
     // Start is called before the first frame update
     void Start()
     {
         gameController = FindAnyObjectByType<GameController>();
+        buttonController = FindAnyObjectByType<ButtonController>();
     }
 
     // Update is called once per frame
@@ -33,11 +35,21 @@ public class ShootControls : MonoBehaviour
             }
         }
     }
+    public void increaseDamge()
+    {
+        if (gameController.coins >= 10)
+        {
+            buttonController.button2.gameObject.SetActive(false);
+            gameController.coins -= 10;
+            damage += 25;
+        }
+    }
     public void UpdateGun()
     {
-        if (gameController.coins >= 4)
+        if (gameController.coins >= 7)
         {
-            gameController.coins -= 4;
+            buttonController.button1.gameObject.SetActive(false);
+            gameController.coins -= 7;
             shotgunUpgraded = true;
         }
     }
