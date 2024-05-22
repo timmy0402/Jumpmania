@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8671657043345252494}
   - component: {fileID: 7438107481980592398}
+  - component: {fileID: 3626790347280493892}
   - component: {fileID: 3850414567007097162}
   m_Layer: 0
   m_Name: Coin
@@ -87,6 +88,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3626790347280493892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189133900669027549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36d1573d1457ccb498a62fd492616b57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -4986890610287934012, guid: 274d64617113287499ed1c4165d1d8f3, type: 3}
+  - {fileID: 6143208460787649835, guid: 274d64617113287499ed1c4165d1d8f3, type: 3}
+  - {fileID: 7609282858266732271, guid: 274d64617113287499ed1c4165d1d8f3, type: 3}
+  - {fileID: -6288512792030432889, guid: 274d64617113287499ed1c4165d1d8f3, type: 3}
+  animationTime: 0.25
+  loop: 1
 --- !u!61 &3850414567007097162
 BoxCollider2D:
   m_ObjectHideFlags: 0
