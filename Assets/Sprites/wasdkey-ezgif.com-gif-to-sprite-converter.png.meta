@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      wasdkey-ezgif.com-gif-to-sprite-converter_0: -2178657969975327134
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
