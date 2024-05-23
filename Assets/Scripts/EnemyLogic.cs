@@ -98,6 +98,15 @@ public class EnemyLogic : MonoBehaviour
         target = new Vector2(player.transform.position.x, transform.position.y); //Only get the x so they dont start hovering
         transform.position = Vector2.MoveTowards(transform.position, target, Time.deltaTime * chaseSpeed);
 
+        //Rotate towards target
+        if (target.x - transform.position.x < 0)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        } else 
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+
         if (shooter && Time.time > shootTimer)
         {
             shootTimer = Time.time + shootCooldown;
@@ -113,6 +122,15 @@ public class EnemyLogic : MonoBehaviour
         {
             movingRight = !movingRight;
             patrolTimer = 0;
+        }
+
+        //Rotate towards moving direction
+        if (!movingRight)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        } else
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
         }
 
         // Move in the current direction
