@@ -5120,4 +5120,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   booletPrefab: {fileID: 9050237730369118198, guid: c2986e522d3870f43984cfac2c9c9cbf, type: 3}
-  damage: 1
+  damage: 25
