@@ -37,11 +37,11 @@ public class ShootControls : MonoBehaviour
     }
     public void increaseDamge()
     {
-        if (gameController.coins >= 10)
+        if (gameController.coins >= 5)
         {
             buttonController.button2.gameObject.SetActive(false);
-            gameController.coins -= 10;
-            damage += 25;
+            gameController.coins -= 5;
+            damage += 10;
         }
     }
     public void UpdateGun()
