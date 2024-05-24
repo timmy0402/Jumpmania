@@ -54,6 +54,7 @@ public class Player : MonoBehaviour
             }
             gameController.coins -= 10;
             buttonController.button3.gameObject.SetActive(false);
+            healthBar.SetHealth(currentHealth);
         }
     }
     public void DamagePlayer(int damage)
