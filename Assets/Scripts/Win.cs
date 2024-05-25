@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelChange : MonoBehaviour
+public class Win : MonoBehaviour
 {
-    public int sceneIndex;
+    private string winScence = "Assets/Scenes/WinScreen.unity";
+    public GameObject boss;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,13 +16,9 @@ public class LevelChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
+        if (boss == null)
         {
-            SceneManager.LoadScene(sceneIndex);
+            SceneManager.LoadScene(winScence);
         }
     }
 }
