@@ -379,7 +379,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 953818600}
-  - component: {fileID: 953818599}
   m_Layer: 0
   m_Name: RestartMenu
   m_TagString: Untagged
@@ -387,19 +386,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &953818599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 953818598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70101f709f1065f418e370b64d54c8a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextScene: Assets/Scenes/CaitlinSampleScene.unity
 --- !u!4 &953818600
 Transform:
   m_ObjectHideFlags: 0
@@ -426,6 +412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1481749610}
   - component: {fileID: 1481749609}
+  - component: {fileID: 1481749611}
   - component: {fileID: 1481749608}
   m_Layer: 0
   m_Name: Main Camera
@@ -508,6 +495,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1481749611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481749607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70101f709f1065f418e370b64d54c8a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextScene: Assets/Scenes/CaitlinSampleScene.unity
 --- !u!1 &1608642493
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,9 +745,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 70101f709f1065f418e370b64d54c8a1, type: 3}
+      - m_Target: {fileID: 1481749611}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

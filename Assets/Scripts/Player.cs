@@ -1,6 +1,5 @@
-using Unity.PlasticSCM.Editor.WebApi;
-using UnityEditor.Build.Content;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -12,6 +11,7 @@ public class Player : MonoBehaviour
     private float timer;
     private Vector2 spawn = new Vector2(-17f, -3.3f);
     private ButtonController buttonController;
+    public string loseScene = "Assets/Scenes/LoseScreen.unity";
 
     private void Start()
     {
@@ -31,8 +31,7 @@ public class Player : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Time.timeScale = 0;
-            Destroy(gameObject);
+            SceneManager.LoadScene(loseScene);
         }
 
         if (transform.position.y < -10)
