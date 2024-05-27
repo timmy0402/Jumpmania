@@ -16,11 +16,12 @@ public class Movement : MonoBehaviour
     public bool onGround;
     private Rigidbody2D rb;
     private float jumpTimer;
-
     public ParticleSystem dust;
+    private AudioSource jump;
     // Start is called before the first frame update
     void Start()
     {
+        jump = GetComponent<AudioSource>();
     }
     void Awake()
     {
@@ -92,6 +93,7 @@ public class Movement : MonoBehaviour
         rb.velocity = new Vector2(rb.velocity.x, 0);
         rb.AddForce(Vector2.up * (jumpForce + runJump), ForceMode2D.Impulse);
         jumpTimer = 0;
+        jump.Play();
     }
     private void OnDrawGizmos()
     {
