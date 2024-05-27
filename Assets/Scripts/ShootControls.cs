@@ -12,6 +12,7 @@ public class ShootControls : MonoBehaviour
     public int damage = 25;
     private bool shotgunUpgraded = false;
     private ButtonController buttonController;
+    public AudioSource shotSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +34,7 @@ public class ShootControls : MonoBehaviour
             {
                 shotgun();
             }
+            shotSound.Play();
         }
     }
     public void increaseDamge()
