@@ -125,3 +125,10 @@ body {
     background-color: #04AA6D;
     color: white;
 }
+
+.headers {
+    font-family: Papyrus, fantasy;
+    color: #231F20;
+    font-weight: bold;
+    font-size: 30px;
+}
