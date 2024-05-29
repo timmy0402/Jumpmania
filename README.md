@@ -17,3 +17,8 @@
 - Kirby
   - Similarities: Platformer with finish line and enemies and items.
   - Differences: Can't fly (maybe) and not a rotund widdle pink alien.
+ 
+  Slides:
+https://docs.google.com/presentation/d/1Y9G9F1vMa0ZBEqZdaPb-igNQPhHp2oKA_zTwuCOdDoY/edit?usp=sharing
+https://docs.google.com/presentation/d/1eCgg15Pc654PJJvTaRebSEn1QN78YMzA034p8KkPkjA/edit?usp=sharing
+
