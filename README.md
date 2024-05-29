@@ -1,5 +1,5 @@
 # Jumpmania
-[WEBGL build](https://timmy0402.github.io/Jumpmania/) Beta
+[WEBGL build](https://timmy0402.github.io/Jumpmania/) 
 ## CSS 385 Project
 - Tim Huynh
 - Rory Bray
